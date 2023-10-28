@@ -23,8 +23,6 @@ def MenuPrint ():
     print("0. 종료")
     print("==================")
 
-userIinput = -1
-
 
 def getRandownWord():
     words = ["hang", "pretty", "apple", "and", "water", "samsung", "MCdonalds", "fluent", "voca", "galaxy"]
@@ -61,7 +59,6 @@ def runHangMan():
         chance = chance -1
         print("LEFT CHANCE :", chance)
 
-    user_input = getHangmanInput(hangman_input_history)
 
 
 def runUpDown():
@@ -86,11 +83,11 @@ def runUpDown():
             else:
                 print("up")
 
-while userIinput != 0:
+userinput = -1
+while userinput != 0:
     MenuPrint()
-    userInput = int(input("SELECT MENU :::"))
-
-    if userInput == 1:
+    userinput = int("SELECT MENU")
+    if userinput == 1:
         runHangMan()
-    elif userInput ==2:
+    elif userinput == 2:
         runUpDown()
