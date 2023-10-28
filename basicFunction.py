@@ -16,7 +16,10 @@ def tmpFunction(x):
 # -> 사용자 입력을 받기
 # -> 결과판단
 
-def MenuPrint ():
+
+
+
+def MenuPrint (print=None):
     print("=======GAME=======")
     print("1. 행맨")
     print("2. 업다운")
