@@ -36,16 +36,30 @@ hangman_input_history =[]
 def getHangManInput():
     while True:
         user_input =input("Input alphabet :::")
-        if(hangmanuser_input_history.index(alphabet)):
+
+        if (alphabet in hangman_input_history):
             print("이미 입력한 값입니다. 새로운 알파벳을 입력해주세요")
         else:
             return alphabet
 
 
 def runHangMan():
-    user_input_history = []
+    hangman_input_history = [] #초기화용
     word = getRandownWord()
-    print("_"*len(word))
+    chance =7
+
+
+    while chance >0:
+
+    alphabet = getHangManInput()
+
+    hangman_input_history.append(alpphabet)
+
+    if word.find(alphabet) != -1   # alphabet이 worrd에 속해있으면 정답이라고 알려주고, 아니면 가화를 깎기
+        print("CORRECT !")
+    else:
+        chance = chance -1
+        print("LEFT CHANCE :", chance)
 
     user_input = getHangmanInput(hangman_input_history)
 
