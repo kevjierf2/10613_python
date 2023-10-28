@@ -61,7 +61,17 @@ def runHangMan():
         chance = chance -1
         print("LEFT CHANCE :", chance)
 
-    user_input = getHangmanInput(hangman_input_history)
+    # 1. 모든 정답을 맞췄을때 게임이 끝나지 않음
+    # -> 맞추면 alive  출력해주고 그만하기 (break문을 사용)
+    for i in range()
+        if word.find(alphabet)
+            break
+        print(success)
+
+    # 2. 내가 맞춘 정답들이 어디에 위치해있는지 알수없음
+    # -> s _ _ s _ _ _ 출력
+    # printCorrectWords() 함수를 선언해서 그 안에서 입력되었던 맞는 항목을 위치에 맞게 출력
+
 
 
 def runUpDown():
