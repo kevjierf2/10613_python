@@ -22,6 +22,7 @@ def menuPrint():
     print("=======GAME=======")
     print("1. 행맨")
     print("2. 업다운")
+    print("3. 2048")
     print("0. 종료")
     print("==================")
 
@@ -91,26 +92,38 @@ def runHangMan():
 
 def runUpDown():
     def runUpDown():
-     answer = random.randrange(0, 10)
-    chance = 3
+        answer = random.randrange(1, 10)
+        chance = 3
 
-    # 사용자가 answer 맞출때까지 반복
-    # # 1. 사용자에게 기회주기(3번)
-    # # 2. 틀렸을때 updown 출력해주기
-    #
-    # while chance > 0:
-    #     user_input = int(input("값을 입력하세요 >>"))
-    #
-    #     if user_input == answer:
-    #         print("정답입니다!")
-    #         break
-    #     else:
-    #         chance = chance - 1
-    #         if user_input > answer:
-    #             print("down")
-    #         else:
-    #             print("up")
-userInput = -1
+        # 사용자가 answer 맞출때까지 반복
+        # 1. 사용자에게 기회주기(3번)
+        # 2. 틀렸을때 updown 출력해주기
+
+        while chance > 0:
+            user_input = int(input("값을 입력하세요 >>"))
+
+            if user_input == answer:
+                print("정답입니다!")
+                break
+            else:
+                chance = chance - 1
+                if user_input > answer:
+                    print("down")
+                else:
+                    print("up")
+
+    userInput = -1
+
+    while userInput != 0:
+        menuPrint()
+        userInput = int(input("SELECT MENU ::: "))
+
+        if userInput == 1:
+            runHangMan()
+        elif userInput == 2:
+            runUpDown()
+        elif userInput == 3:
+            run2048()
 
 while userInput != 0:
     menuPrint()
